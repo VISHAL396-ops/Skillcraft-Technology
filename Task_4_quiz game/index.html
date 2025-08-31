@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h1>Quiz Challenge</h1>
+            <p>Test your knowledge with questions of different types!</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div id="quiz-header">
+                <h2 id="question-text">Question text goes here...</h2>
+            </div>
+            <div id="answer-container">
+                </div>
+            <button id="next-btn">Next</button>
+        </div>
+
+        <div id="results-screen" class="screen hidden">
+            <h1>Quiz Complete!</h1>
+            <p>Your final score is:</p>
+            <p id="score-text">0 / 0</p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
