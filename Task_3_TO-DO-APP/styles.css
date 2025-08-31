@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1000vh;
+  background: #0e1a30;
+}
+
+#head-text {
+  margin-top: 50px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  color: #fe9e0f;
+ text-shadow: 0 0 6px rgba(28, 28, 26, 0.80);
+}
+
+.container {
+  width: 40%;
+  top: 30%;
+  left: 50%;
+  background: rgb(44, 67, 82);
+  box-shadow: 0 0 6px rgba(233, 227, 227, 0.80);
+  border-radius: 5px;
+  min-width: 450px;
+  position: absolute;
+  min-height: 100px;
+  transform: translate(-50%, -50%);
+}
+
+#newtask {
+  position: relative;
+  padding: 30px 20px;
+}
+
+#newtask input {
+  width: 75%;
+  height: 45px;
+  padding: 12px;
+  color: #111111;
+  box-shadow: 0 0 6px rgba(194, 37, 37, 0.80);
+  font-weight: 500;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  border: 2px solid #33b1ff;
+}
+
+#newtask input:focus {
+  outline: none;
+  border-color: #233f60;
+}
+
+#newtask button {
+  float: right;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #05080c;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.tasks {
+  border-radius: 5px;
+  width: 100%;
+  background-color: #786868;
+  padding: 30px 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tasks::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tasks::-webkit-scrollbar-track {
+  background: #bae6ff;
+  border-radius: 25px;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+  background: #ccd8e5;
+  border-radius: 25px;
+}
+
+.task {
+  border: 1px solid #f89a17c0;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 10px 10px;
+  display: flex;
+  width: 100%;
+}
+
+.delete {
+  padding: 5px 5px;
+  background: #e72929;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(233, 227, 227, 0.80);
+  transition: transform 0.2s ease;
+}
+
+.check-task {
+  margin-right: 20px;
+}
+
+.task label {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: flex-start;
+}
+
+.task label p.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task label input {
+  margin-top: 3px;
+}
