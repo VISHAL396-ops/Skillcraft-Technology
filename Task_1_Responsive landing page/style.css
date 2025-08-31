@@ -1,0 +1,84 @@
+/* CSS for the page and navigation menu */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Add enough height to enable scrolling */
+    height: 200vh; 
+    background-color: #120909;
+}
+
+/* --- 1. Initial Navigation Bar Style --- */
+#main-nav {
+    background-color: transparent; /* Starts transparent */
+    position: fixed; /* Sticks to the top */
+    top: 7;
+    width: 100%;
+    z-index: 1000; /* Stays on top of other content */
+    padding: 15px 3px;
+    /* Smooth transition for background color change */
+    transition: background-color 0.4s ease-out, padding 0.4s ease-out; 
+}
+
+/* --- 2. Scrolled Navigation Bar Style --- */
+/* This class is added by JavaScript when you scroll */
+#main-nav.scrolled {
+    background-color: #353525; /* Solid dark blue on scroll */
+    padding: 10px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Aligns menu items to the right */
+}
+
+#main-nav ul li {
+    margin-left: 25px;
+}
+
+#main-nav ul li a {
+    text-decoration: none;
+    color: rgb(106, 22, 27);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* --- 3. Hover Style for Menu Items --- */
+#main-nav ul li a:hover {
+    color: #e2eeec; /* Teal color on hover */
+}
+
+/* Optional: Underline effect on hover */
+#main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Starts with no width */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1abc9c;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+#main-nav ul li a:hover::after {
+    transform: scaleX(1); /* Expands to full width */
+    transform-origin: bottom left;
+}
+
+/* --- Placeholder Content for Scrolling --- */
+.content {
+    padding: 100px 50px 50px;
+    color: #766969;
+}
+
+.content h1 {
+    font-size: 3em;
+}
