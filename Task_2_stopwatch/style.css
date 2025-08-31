@@ -1,0 +1,113 @@
+body {
+    background-color: #252628;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.stopwatch-container {
+    background-color: #736b6b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(57, 50, 50, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.time-display {
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #95a8bb;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 25px;
+}
+
+.controls button {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgb(36, 18, 18);
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.controls button:hover {
+    opacity: 0.9;
+}
+
+.controls button:active {
+    transform: scale(0.98);
+}
+
+#startBtn {
+    background-color: #ae9527; /* Green */
+}
+
+#pauseBtn {
+    background-color: #f32112; /* Orange */
+}
+
+#resetBtn {
+    background-color: #e74c3c; /* Red */
+}
+
+#lapBtn {
+    background-color: #3498db; /* Blue */
+}
+
+/* Initially hide pause button */
+#pauseBtn {
+    display: none;
+}
+
+/* Style for disabled lap button */
+#lapBtn:disabled {
+    background-color: #96a7a8;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.laps-container {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #0d7089;
+    text-align: left;
+}
+
+.laps-container h2 {
+    color: #34495e;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+#lapsList {
+    list-style-type: none;
+    padding: 0 10px;
+    margin: 0;
+}
+
+#lapsList li {
+    padding: 10px 5px;
+    font-size: 1.2em;
+    color: #ba6f1f;
+    border-bottom: 1px solid #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lapsList li:last-child {
+    border-bottom: none;
+}
+
+#lapsList .lap-number {
+    font-weight: bold;
+    color: #3269b5;
+}
